@@ -1,0 +1,7 @@
+[build]
+builder = "nixpacks"
+buildCommand = "go build -o out/server ./cmd/mcp-http/main.go"
+
+[deploy]
+startCommand = "./out/server"
+healthcheckPath = "/api/health"
